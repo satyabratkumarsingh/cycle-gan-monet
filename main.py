@@ -46,7 +46,7 @@ def main():
     BATCH_SIZE = 1
     LEARNING_RATE = 1e-5
     NUM_WORKERS = 4
-    NUM_EPOCHS = 1
+    NUM_EPOCHS = 10
 
     disc_photo = Discriminator(in_channels=3).to(DEVICE)
     disc_monet = Discriminator(in_channels=3).to(DEVICE)
