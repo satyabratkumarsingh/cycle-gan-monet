@@ -98,10 +98,10 @@ def train_model(device,
         g_scaler.scale(generator_loss).backward()
         g_scaler.step(opt_gen)
         g_scaler.update()
-        
+
         if idx % 200 == 0:
-            save_image(fake_photo * 0.5 + 0.5, f"././output-dataset/photo/photo_{idx}.png")
-            save_image(fake_monet * 0.5 + 0.5, f"././output-dataset/monet/monet_{idx}.png")
+            save_image(fake_photo * 0.5 + 0.5, f"././output-dataset/photo/photo_{idx}.jpg")
+            save_image(fake_monet * 0.5 + 0.5, f"././output-dataset/monet/monet_{idx}.jpg")
 
         loop.set_postfix(Photo_real=Photo_real / (idx + 1), Photo_fake=Photo_fake / (idx + 1))
     return generator_monet, generator_photo
